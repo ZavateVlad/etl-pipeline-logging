@@ -1,0 +1,79 @@
+{
+  "files_processed": 3,
+  "total_valid_rows": 5,
+  "total_invalid_rows": 2,
+  "details": [
+    {
+      "filename": "sales_2024_01.csv",
+      "total_rows": 3,
+      "valid_rows": [
+        {
+          "date": "2024-01-15",
+          "product": "Laptop",
+          "amount": "1200",
+          "region": "North"
+        },
+        {
+          "date": "2024-01-16",
+          "product": "Mouse",
+          "amount": "25",
+          "region": "South"
+        },
+        {
+          "date": "2024-01-17",
+          "product": "Keyboard",
+          "amount": "75",
+          "region": "East"
+        }
+      ],
+      "invalid_rows": [],
+      "success": true
+    },
+    {
+      "filename": "sales_2024_02.csv",
+      "total_rows": 3,
+      "valid_rows": [
+        {
+          "date": "2024-02-10",
+          "product": "Monitor",
+          "amount": "450",
+          "region": "West"
+        },
+        {
+          "date": "2024-02-12",
+          "product": "Mouse",
+          "amount": "30",
+          "region": "South"
+        }
+      ],
+      "invalid_rows": [
+        {
+          "row": {
+            "date": "2024-02-11",
+            "product": "Laptop",
+            "amount": "INVALID",
+            "region": "North"
+          },
+          "error": "Not a number"
+        }
+      ],
+      "success": true
+    },
+    {
+      "filename": "sales_2024_03_corrupted.csv",
+      "total_rows": 1,
+      "valid_rows": [],
+      "invalid_rows": [
+        {
+          "row": {
+            "date": "2024-03-01",
+            "product": "Keyboard",
+            "amount": "80"
+          },
+          "error": "Missing columns: ['region']"
+        }
+      ],
+      "success": false
+    }
+  ]
+}
